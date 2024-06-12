@@ -18,20 +18,20 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-  
-    if (email === '' || email === null) { 
-       console.log("kdjfsd");
-      Alert.alert('Form Error', 'Please Enter Your Email', [
-        {text: 'Ok', style: 'cancel'},
-      ]);
-    } else if (password === '' || password === null) {
-      Alert.alert('Form Error', 'Please Enter Your Password', [
-        {text: 'Ok', style: 'cancel'},
-      ]);
-    } else {
-      //navigation.navigate('BottomTab');
-    }
-  };
+    navigation.navigate('BottomTab');
+  //   if (email === '' || email === null) { 
+  //      console.log("kdjfsd");
+  //     Alert.alert('Form Error', 'Please Enter Your Email', [
+  //       {text: 'Ok', style: 'cancel'},
+  //     ]);
+  //   } else if (password === '' || password === null) {
+  //     Alert.alert('Form Error', 'Please Enter Your Password', [
+  //       {text: 'Ok', style: 'cancel'},
+  //     ]);
+  //   } else {
+  //     navigation.navigate('BottomTab');
+  //   }
+   };
 
   return (
     <SafeAreaView style={styles.safeAreaView}>

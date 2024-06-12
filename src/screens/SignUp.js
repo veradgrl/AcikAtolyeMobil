@@ -4,7 +4,6 @@ import {
   View,
   Text,
   StyleSheet,
-  Image,
   TouchableOpacity,
   Alert,
 } from 'react-native';
@@ -19,7 +18,7 @@ const SignUp = () => {
   const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
 
-  const handleLogin = () => {
+  const handleSignUp = () => {
     if (
       email === '' ||
       email === null ||
@@ -35,7 +34,7 @@ const SignUp = () => {
         {text: 'Ok', style: 'cancel'},
       ]);
     } else {
-      //navigation.navigate('BottomTab');
+      navigation.navigate('BottomTab');
     }
   };
 
@@ -117,7 +116,7 @@ const SignUp = () => {
           <View style={styles.formAction}>
             <TouchableOpacity
               onPress={() => {
-                handleLogin();
+                handleSignUp();
               }}>
               <View style={styles.btn}>
                 <Text style={styles.btnText}>Sign in</Text>
@@ -140,7 +139,7 @@ const SignUp = () => {
           style={{marginTop: 'auto'}}>
           <Text style={styles.formFooter}>
             Already have an account ?{' '}
-            <Text style={{textDecorationLine: 'underline'}}>Sign up</Text>
+            <Text style={{textDecorationLine: 'underline'}}>Sign in</Text>
           </Text>
         </TouchableOpacity>
       </View>

@@ -1,7 +1,7 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeStack from '../StackNavigation/HomeStack';
-import ProfileStack from '../StackNavigation/ProfileStack';
+import ProfileStack from '../StackNavigation/ProfileStack'
  
 const Tab = createBottomTabNavigator();
  // tab'ler stak'leri tutar ve stak yığındır

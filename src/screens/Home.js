@@ -5,21 +5,20 @@ import {
   View,
   SafeAreaView,
   StyleSheet,
-  Platform,
+  ScrollView,
 } from 'react-native';
 
 const Home = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.body}>
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate('Home2');
-          }}
-          style={styles.button}>
-          <Text>Home2</Text>
-        </TouchableOpacity>
-      </View>
+      <ScrollView style={{flex: 1}}>
+        <View style={styles.header}>
+          <TouchableOpacity style={styles.headerButton}></TouchableOpacity>
+          <Text style={styles.headerTitle}>Home</Text>
+          <TouchableOpacity style={styles.headerButton}></TouchableOpacity>
+        </View>
+        <View style={styles.body}></View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
@@ -35,27 +34,29 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
+    backgroundColor:'#481E14'
   },
-
-  row: {
+  header: {
+    backgroundColor: '#000',
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    width: '100%',
+    justifyContent: 'space-between',
     alignItems: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
   },
-
-  button: {
-    backgroundColor: '#AFD198',
-    height: 120,
-    width: '80%',
+  headerButton: {
+    width: 40,
+    height: 40,
+    borderRadius: 99,
+    backgroundColor: '#fff',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 10,
-    marginTop: 20,
   },
-  buttonText: {
-    color: '#2D6A4F',
-    fontSize: 30,
-    fontWeight: '900',
-  },
+
+  
+  headerTitle:{
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: 'bold'
+  }
 });
