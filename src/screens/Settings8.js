@@ -6,33 +6,28 @@ import {
   TouchableOpacity,
   SafeAreaView,
 } from 'react-native';
-import OB2 from '../../assets/svg/OB2';
+import S8 from '../../assets/svg/S8';
 
 const OnBoarding2 = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.body}>
         <View style={styles.imgContainer}>
-          <OB2 />
+          <S8 />
         </View>
 
-        <View style={styles.mainTextContainer}>
-          <Text style={styles.mainText}>Know where your money goes</Text>
-        </View>
         <View style={styles.secondaryTextContainer}>
           <Text style={styles.secondaryText}>
-            Track your transaction easily, with categories and financial report{' '}
+          Check your email, we send you the financial report. In certain cases, it might take a little longer, depending on the time period and the volume of activity.
           </Text>
         </View>
 
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.primaryButton}>
-            <Text style={styles.primaryButtonText}>Sign Up</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.secondaryButton}>
-            <Text style={styles.secondaryButtonText}>Login</Text>
+            <Text style={styles.primaryButtonText}>Back to Home</Text>
           </TouchableOpacity>
         </View>
+
       </View>
     </SafeAreaView>
   );
@@ -52,22 +47,11 @@ const styles = StyleSheet.create({
   },
 
   imgContainer: {
+    marginTop:60,
     width: '100%',
     height: 300,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-
-  mainTextContainer: {
-    marginTop: 40,
-  },
-
-  mainText: {
-    color: '#212325',
-    textAlign: 'center',
-    fontSize: 32,
-    fontWeight: '700',
-    lineHeight: 40,
   },
 
   secondaryTextContainer: {
@@ -75,14 +59,14 @@ const styles = StyleSheet.create({
   },
 
   secondaryText: {
-    color:'#91919F',
+    color:'#292B2D',
     textAlign:'center',
     fontSize:16,
     fontWeight:'500',
   },
 
   buttonContainer:{
-    marginTop:81
+    marginTop:170
   },
 
   primaryButton: {
@@ -104,19 +88,4 @@ const styles = StyleSheet.create({
     fontWeight:'600',
   },
 
-  secondaryButton: {
-    backgroundColor:'#EEE5FF',
-    width:'100%',
-    height:56,
-    padding:8,
-    justifyContent:'center',
-    alignItems:'center',
-    borderRadius:16,
-  },
-
-  secondaryButtonText: {
-    color:'#7F3DFF',
-    fontSize: 18,
-    fontWeight:'600',
-  },
 });

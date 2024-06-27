@@ -24,6 +24,7 @@ const OnBoarding15 = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.body}>
         <ScrollView>
+          <View style={styles.firstBody}>
           <View style={styles.titleContainer}>
             <TouchableOpacity>
               <ArrowWhite style={styles.arrow} />
@@ -35,10 +36,10 @@ const OnBoarding15 = () => {
             <Text style={styles.balanceText}>Balance</Text>
           </View>
 
-          <View style={styles.moneyContainer}>
+          <View>
             <Text style={styles.moneyInflow}>$00.0</Text>
           </View>
-
+          </View>
           <SafeAreaView style={styles.secondBody}>
             <View style={styles.inputContainer}>
               <TextInput
@@ -115,72 +116,70 @@ const styles = StyleSheet.create({
     backgroundColor: '#7F3DFF',
   },
 
+  firstBody:{
+    paddingHorizontal:16
+  },
+
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    display: 'flex',
-    margin: 16,
+    marginTop: 16,
     marginBottom: 56,
   },
 
   titleText: {
     color: '#FFFFFF',
-    display: 'flex',
     textAlign: 'center',
     width: 247,
     fontSize: 18,
-    fontWeight: 600,
+    fontWeight: '600',
     marginLeft: 10,
   },
 
   balanceContainer: {
     marginTop: 145,
-    marginLeft: 16,
     marginBottom: 10,
   },
 
   balanceText: {
     color: '#FCFCFC',
     fontSize: 18,
-    fontWeight: 600,
+    fontWeight: '600',
     opacity: 0.65,
   },
 
-  moneyContainer: {
-    marginLeft: 16,
-  },
+
 
   moneyInflow: {
     color: '#FCFCFC',
     fontSize: 64,
-    fontWeight: 600,
+    fontWeight: '600',
   },
 
   secondBody: {
     backgroundColor: '#FFFFFF',
     borderTopRightRadius: 32,
     borderTopLeftRadius: 32,
-
-    width: 360,
+    width: '100%',
     height: 500,
     flexDirection: 'column',
     marginTop: 8,
+    paddingHorizontal:16
   },
 
 bankTextContaier:{
   marginTop:16,
   marginBottom:8,
-  marginLeft:16,
 },
 
-bankText :{color:'#000000',
+bankText :{
+  color:'#000000',
   fontSize:16,
-  fontWeight:500
+  fontWeight:'500'
 },
 
   bankTypesContainer:{
     flexDirection:'row',
-    marginHorizontal:16,
     marginVertical:8
   },
 
@@ -189,20 +188,18 @@ bankText :{color:'#000000',
     backgroundColor:'#F1F1FA', 
     width:76, 
     height:40, 
-    display:'flex', 
-    justifyContent:'center', alignItems:'center', 
+    justifyContent:'center',
+     alignItems:'center', 
     padding:8,
     borderRadius:8
   },
 
   inputContainer: {
-    display: 'flex',
     borderRadius: 16,
     borderColor: '#F1F1FA',
     borderStyle: 'solid',
     borderWidth: 1,
     marginTop: 16,
-    marginHorizontal: 16,
     paddingHorizontal: 16,
     paddingVertical: 8,
   },
@@ -213,12 +210,10 @@ bankText :{color:'#000000',
   },
 
   buttonContainer: {
-    display: 'flex',
     backgroundColor: '#7F3DFF',
-    width: 327,
+    width: '100%',
     height: 56,
     padding: 8,
-    marginHorizontal: 16,
     borderRadius: 16,
     justifyContent: 'center',
     alignItems: 'center',
@@ -228,6 +223,6 @@ bankText :{color:'#000000',
   buttonText: {
     color: '#FCFCFC',
     fontSize: 18,
-    fontWeight: 600,
+    fontWeight: '600',
   },
 });

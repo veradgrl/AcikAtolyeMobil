@@ -78,13 +78,14 @@ const styles = StyleSheet.create({
 
   body: {
     flex: 1,
+    paddingHorizontal: 16,
+
   },
 
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    display: 'flex',
-    margin: 16,
+    marginTop: 16,
     marginBottom: 56,
   },
 
@@ -94,12 +95,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: 247,
     fontSize: 18,
-    fontWeight: 600,
+    fontWeight: '600',
     marginLeft: 10,
   },
 
   inputContainer: {
-    marginHorizontal: 16,
     borderRadius: 16,
     borderStyle: 'solid',
     borderWidth: 1,
@@ -118,14 +118,13 @@ const styles = StyleSheet.create({
 
   button: {
     display: 'flex',
-    width: 327,
+    width: '100%',
     height: 56,
     padding: 8,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 16,
     backgroundColor: '#7F3DFF',
-    marginHorizontal: 16,
     marginTop: 20,
   },
 
@@ -133,7 +132,7 @@ const styles = StyleSheet.create({
     color: '#FCFCFC',
     textAlign: 'center',
     fontSize: 18,
-    fontWeight: 600,
+    fontWeight: '600',
   },
 
   forgotPassword: {

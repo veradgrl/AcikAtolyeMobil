@@ -29,15 +29,15 @@ const styles =StyleSheet.create({
 
     body :{
         flex:1,
+        paddingHorizontal:16
     },
 
     successContainer :{
-        width:128,
+        width:'100%',
         height:128,
         padding:16,
         justifyContent:'center',
         alignItems:'center',
-        marginHorizontal:120,
         marginTop:250,
         marginBottom:16
     },
@@ -51,5 +51,5 @@ const styles =StyleSheet.create({
     text :{ 
         color:'#212325',
         fontSize:24,
-        fontWeight:500},
+        fontWeight:'500'},
 })

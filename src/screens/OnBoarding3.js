@@ -47,42 +47,37 @@ const styles = StyleSheet.create({
   
     body: {
       flex: 1,
-      // paddingHorizontal: 16,
+      paddingHorizontal: 16,
     },
   
     imgContainer: {
-      width: 300,
+      width: '100%',
       height: 300,
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: 30,
-      marginHorizontal: 30,
     },
   
     mainTextContainer: {
       marginTop: 40,
-      marginHorizontal: 40,
     },
   
     mainText: {
       color: '#212325',
       textAlign: 'center',
       fontSize: 32,
-      fontWeight: 700,
+      fontWeight: '700',
       lineHeight: 40,
     },
   
     secondaryTextContainer: {
-   
       marginTop: 16,
-      marginHorizontal:50,
     },
   
     secondaryText: {
       color:'#91919F',
       textAlign:'center',
       fontSize:16,
-      fontWeight:500,
+      fontWeight:'500',
     },
   
     buttonContainer:{
@@ -91,14 +86,12 @@ const styles = StyleSheet.create({
   
     primaryButton: {
       backgroundColor:'#7F3DFF',
-      display:'flex',
-      width:327,
+      width:'100%',
       height:56,
      padding:8,
      justifyContent:'center',
      alignItems:'center',
      borderRadius:16,
-     marginHorizontal:16,
      marginBottom:16,
   
     },
@@ -107,25 +100,23 @@ const styles = StyleSheet.create({
       color:'#FCFCFC',
       textAlign:'center',
       fontSize: 18,
-      fontWeight:600,
+      fontWeight:'600',
     },
   
     secondaryButton: {
       backgroundColor:'#EEE5FF',
-      display:'flex',
-      width:327,
+      width:'100%',
       height:56,
       padding:8,
       justifyContent:'center',
       alignItems:'center',
       borderRadius:16,
-      marginHorizontal:16
   
     },
   
     secondaryButtonText: {
       color:'#7F3DFF',
       fontSize: 18,
-      fontWeight:600,
+      fontWeight:'600',
     },
   });

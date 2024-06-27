@@ -63,19 +63,19 @@ const styles = StyleSheet.create({
   },
   body: {
     flex: 1,
+    paddingHorizontal: 16,
+
   },
 
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    display: 'flex',
-    margin: 16,
+    marginTop: 16,
     marginBottom: 56,
   },
 
   titleText: {
     color: '#212325',
-    display: 'flex',
     textAlign: 'center',
     width: 247,
     fontSize: 18,
@@ -85,7 +85,6 @@ const styles = StyleSheet.create({
 
 
   inputContainer: {
-    marginHorizontal: 16,
     borderRadius: 16,
     borderStyle: 'solid',
     borderWidth: 1,
@@ -103,21 +102,19 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    display: 'flex',
-    width: 327,
+    width: '100%',
     height: 56,
     padding: 8,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 16,
     backgroundColor: '#7F3DFF',
-    marginHorizontal: 16,
   },
 
   buttonText: {
     color: '#FCFCFC',
     textAlign: 'center',
     fontSize: 18,
-    fontWeight: 600,
+    fontWeight: '600',
   },
 });

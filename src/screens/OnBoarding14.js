@@ -16,6 +16,7 @@ const OnBoarding14 = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.body}>
         <ScrollView>
+          <View style={styles.firstBody}>
         <View style={styles.titleContainer}>
           <TouchableOpacity>
             <ArrowWhite style={styles.arrow} />
@@ -27,10 +28,10 @@ const OnBoarding14 = () => {
           <Text style={styles.balanceText}>Balance</Text>
         </View>
 
-        <View style={styles.moneyContainer}>
+        <View>
           <Text style={styles.moneyInflow}>$00.0</Text>
         </View>
-
+        </View>
         <SafeAreaView style={styles.secondBody}>
 
           <View style={styles.inputContainer}>
@@ -65,66 +66,65 @@ const styles = StyleSheet.create({
   body: {
     flex: 1,
     backgroundColor: '#7F3DFF',
+    
+  },
+  firstBody:{
+    paddingHorizontal:16
   },
 
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    display: 'flex',
-    margin: 16,
+    marginTop: 16,
     marginBottom: 56,
   },
 
   titleText: {
     color: '#FFFFFF',
-    display: 'flex',
     textAlign: 'center',
     width: 247,
     fontSize: 18,
-    fontWeight: 600,
+    fontWeight: '600',
     marginLeft: 10,
   },
 
   balanceContainer: {
     marginTop: 240,
-    marginLeft: 16,
     marginBottom: 10,
   },
 
   balanceText: {
     color: '#FCFCFC',
     fontSize: 18,
-    fontWeight: 600,
+    fontWeight: '600',
     opacity: 0.65,
   },
 
-  moneyContainer: {
-    marginLeft: 16,
-  },
+
 
   moneyInflow: {
     color: '#FCFCFC',
     fontSize: 64,
-    fontWeight: 600,
+    fontWeight: '600',
   },
 
   secondBody: {
     backgroundColor: '#FFFFFF',
     borderRadius: 32,
-    width: 360,
-    height: 300,
+    width: '100%',
+    height: 350,
     flexDirection: 'column',
     marginTop: 8,
+    paddingHorizontal: 16,
+
   },
 
   inputContainer:{
-    display:'flex',
     borderRadius:16,
     borderColor:'#F1F1FA',
     borderStyle:'solid',
     borderWidth:1,
     marginTop:16,
-    marginHorizontal:16,
     paddingHorizontal:16,
     paddingVertical:8
   },
@@ -135,12 +135,10 @@ const styles = StyleSheet.create({
   },
 
   buttonContainer:{
-    display:'flex',
     backgroundColor:'#7F3DFF',
     width:327,
     height:56,
     padding:8,
-    marginHorizontal:16,
     borderRadius:16,
     justifyContent:'center',
     alignItems:'center',
@@ -150,7 +148,7 @@ const styles = StyleSheet.create({
   buttonText:{
     color:'#FCFCFC',
     fontSize:18,
-    fontWeight:600
+    fontWeight:'600'
   },  
 
 });

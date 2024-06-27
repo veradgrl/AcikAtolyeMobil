@@ -48,21 +48,20 @@ const styles = StyleSheet.create ({
     mainText :{
         color:'#212325',
         fontSize:36,
-        fontWeight:500
+        fontWeight:'500'
     },
     
     
     secondaryText :{
         color:'#212325',
         fontSize:14,
-        fontWeight:500,
+        fontWeight:'500',
         lineHeight:18
     },
 
     buttonContainer: {
-        display: 'flex',
         backgroundColor: '#7F3DFF',
-        width: 327,
+        width: '100%',
         height: 56,
         padding: 8,
         borderRadius: 16,
@@ -74,7 +73,7 @@ const styles = StyleSheet.create ({
       buttonText: {
         color: '#FCFCFC',
         fontSize: 18,
-        fontWeight: 600,
+        fontWeight: '600',
       },
 
 })

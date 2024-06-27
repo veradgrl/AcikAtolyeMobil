@@ -105,13 +105,13 @@ const styles = StyleSheet.create({
 
   body: {
     flex: 1,
+    paddingHorizontal:16,
   },
 
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    display: 'flex',
-    margin: 16,
+    marginTop: 16,
     marginBottom: 56,
   },
 
@@ -121,12 +121,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: 247,
     fontSize: 18,
-    fontWeight: 600,
+    fontWeight: '600',
     marginLeft: 10,
   },
 
   inputContainer: {
-    marginHorizontal: 16,
     borderRadius: 16,
     borderStyle: 'solid',
     borderWidth: 1,
@@ -156,7 +155,6 @@ const styles = StyleSheet.create({
   },
 
   primaryButton: {
-    display: 'flex',
     width: 327,
     height: 56,
     padding: 8,
@@ -164,14 +162,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 16,
     backgroundColor: '#7F3DFF',
-    marginHorizontal: 16,
   },
 
   primaryButtonText: {
     color: '#FCFCFC',
     textAlign: 'center',
     fontSize: 18,
-    fontWeight: 600,
+    fontWeight: '600',
   },
 
   orWith: {
@@ -184,16 +181,14 @@ const styles = StyleSheet.create({
   },
 
   secondaryButton: {
-    display: 'flex',
     flexDirection: 'row',
-    width: 327,
+    width: '100%',
     height: 56,
     padding: 8,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 16,
     backgroundColor: '#F1F1FA',
-    marginHorizontal: 16,
     marginBottom: 20,
   },
 
@@ -205,13 +200,13 @@ const styles = StyleSheet.create({
     color: '#212325',
     textAlign: 'center',
     fontSize: 18,
-    fontWeight: 600,
+    fontWeight: '600',
   },
-
+  
   firstText: {
     color: '#91919F',
     fontSize: 16,
-    fontWeight: 500,
+    fontWeight: '500',
     justifyContent: 'center',
     textAlign: 'center',
   },
