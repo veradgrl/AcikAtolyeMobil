@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import S8 from '../../assets/svg/S8';
 
-const OnBoarding2 = () => {
+const Settings8 = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.body}>
@@ -33,7 +33,7 @@ const OnBoarding2 = () => {
   );
 };
 
-export default OnBoarding2;
+export default Settings8;
 
 const styles = StyleSheet.create({
   container: {

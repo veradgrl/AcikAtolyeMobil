@@ -9,13 +9,14 @@ import {
 } from 'react-native';
 import Arrow from '../../assets/svg/Arrow';
 
-const Settings4 = () => {
+const Settings4 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.body}>
         <ScrollView>
         <View style={styles.titleContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity
+          onPress={()=> navigation.goBack()}>
             <Arrow />
           </TouchableOpacity>
           <Text style={styles.titleText}>Theme</Text>

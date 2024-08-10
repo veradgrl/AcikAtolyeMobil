@@ -7,11 +7,13 @@ import {
   SafeAreaView,
 } from 'react-native';
 import OB1 from '../../assets/svg/OB1';
+import { ScrollView } from 'react-native-gesture-handler';
 
-const OnBoarding1 = () => {
+const OnBoarding1 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.body}>
+        <ScrollView>
         <View style={styles.imgContainer}>
           <OB1 />
         </View>
@@ -27,14 +29,18 @@ const OnBoarding1 = () => {
 
         <View style={styles.buttonContainer}>
           <TouchableOpacity
+          onPress={() => navigation.navigate ('OnBoarding4')}
             style={styles.primaryButton}>
             <Text style={styles.primaryButtonText}>Sign Up</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.secondaryButton}>
+          <TouchableOpacity
+          onPress={()=>  navigation.navigate ('OnBoarding7') }
+          style={styles.secondaryButton}>
             <Text style={styles.secondaryButtonText}>Login</Text>
           </TouchableOpacity>
         </View>
+        </ScrollView>
       </View>
     </SafeAreaView>
   );

@@ -7,58 +7,55 @@ import {
   View,
 } from 'react-native';
 import Arrow from '../../assets/svg/Arrow';
+import MyRoundCheckBox from '../components/MyRoundCheckBox';
 
-const Settings2 = () => {
+const Settings2 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.body}>
         <View style={styles.titleContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
             <Arrow />
           </TouchableOpacity>
           <Text style={styles.titleText}>Currency</Text>
         </View>
 
-        <View style={styles.settingContainer}>
-          <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}>
+        <View style={styles.currencyContainer}>
+          <View style={styles.currencyBody}>
             <Text style={styles.firstText}>United States (USD)</Text>
-            <Text style={styles.secondText}>{'o'}</Text>
-          </TouchableOpacity>
+            <MyRoundCheckBox />
+          </View>
         </View>
-        <View style={styles.settingContainer}>
-          <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}>
+        <View style={styles.currencyContainer}>
+          <View style={styles.currencyBody}>
             <Text style={styles.firstText}>Indonesia (IDR)</Text>
-            <Text style={styles.secondText}>{'o'}</Text>
-          </TouchableOpacity>
+            <MyRoundCheckBox />
+          </View>
         </View>
-        <View style={styles.settingContainer}>
-          <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}>
+        <View style={styles.currencyContainer}>
+          <View style={styles.currencyBody}>
             <Text style={styles.firstText}>Japan (JPY)</Text>
-            <Text style={styles.secondText}>{'o'}</Text>
-          </TouchableOpacity>
+            <MyRoundCheckBox/>
+          </View>
         </View>
-        <View style={styles.settingContainer}>
-          <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}>
+        <View style={styles.currencyContainer}>
+          <View style={styles.currencyBody}>
             <Text style={styles.firstText}>Russia (RUB)</Text>
-            <Text style={styles.secondText}>{'o'}</Text>
-          </TouchableOpacity>
+            <MyRoundCheckBox />
+          </View>
         </View>
-        <View style={styles.settingContainer}>
-          <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}>
+        <View style={styles.currencyContainer}>
+          <View style={styles.currencyBody}>
             <Text style={styles.firstText}>Germany (EUR)</Text>
-            <Text style={styles.secondText}>{'o'}</Text>
-          </TouchableOpacity>
+            <MyRoundCheckBox />
+          </View>
         </View>
-        <View style={styles.settingContainer}>
-          <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}>
+        <View style={styles.currencyContainer}>
+          <View style={styles.currencyBody}>
             <Text style={styles.firstText}>Korea (WON)</Text>
-            <Text style={styles.secondText}>{'o'}</Text>
-          </TouchableOpacity>
+            <MyRoundCheckBox />
+          </View>
         </View>
-       
-
-
-
       </View>
     </SafeAreaView>
   );
@@ -81,12 +78,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: 16,
-   marginBottom:16
+    marginBottom: 16,
   },
 
   titleText: {
     color: '#212325',
-    display: 'flex',
     textAlign: 'center',
     width: 247,
     fontSize: 18,
@@ -94,20 +90,19 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
 
-  settingContainer:{
-    marginTop:16,
-    paddingVertical:16
+  currencyContainer: {
+    marginTop: 16,
+    paddingVertical: 16,
   },
 
-  firstText:{
-    color:'#292B2D',
-    fontSize:16,
-    fontWeight:'500'
+  currencyBody: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
 
-  secondText:{
-    color:'#91919F',
-    fontSize:14,
-    fontWeight:'500',
+  firstText: {
+    color: '#292B2D',
+    fontSize: 16,
+    fontWeight: '500',
   },
 });

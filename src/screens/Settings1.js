@@ -8,19 +8,20 @@ import {
 } from 'react-native';
 import Arrow from '../../assets/svg/Arrow';
 
-const Settings1 = () => {
+const Settings1 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.body}>
         <View style={styles.titleContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> navigation.goBack()}>
             <Arrow />
           </TouchableOpacity>
           <Text style={styles.titleText}>Settings</Text>
         </View>
 
         <View style={styles.settingContainer}>
-          <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}>
+          <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}
+          onPress={()=> navigation.navigate ('Settings2')}>
             <Text style={styles.firstText}>Currency</Text>
             <View style={{flexDirection:'row', alignItems:'center'}}>
             <Text style={styles.secondText}>USD</Text>
@@ -28,8 +29,10 @@ const Settings1 = () => {
             </View>
           </TouchableOpacity>
         </View>
+
         <View style={styles.settingContainer}>
-          <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}>
+          <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}
+          onPress={()=> navigation.navigate ('Settings3')}>
             <Text style={styles.firstText}>Language</Text>
             <View style={{flexDirection:'row', alignItems:'center'}}>
             <Text style={styles.secondText}>English</Text>
@@ -37,8 +40,10 @@ const Settings1 = () => {
             </View>
           </TouchableOpacity>
         </View>
+
         <View style={styles.settingContainer}>
-          <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}>
+          <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}
+          onPress={()=> navigation.navigate ('Settings4')}>
             <Text style={styles.firstText}>Theme</Text>
             <View style={{flexDirection:'row', alignItems:'center'}}>
             <Text style={styles.secondText}>Dark</Text>
@@ -46,8 +51,10 @@ const Settings1 = () => {
             </View>
           </TouchableOpacity>
         </View>
+
         <View style={styles.settingContainer}>
-          <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}>
+          <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}
+          onPress={()=> navigation.navigate ('Settings5')}>
             <Text style={styles.firstText}>Security</Text>
             <View style={{flexDirection:'row', alignItems:'center'}}>
             <Text style={styles.secondText}>Fingerprint</Text>
@@ -55,14 +62,17 @@ const Settings1 = () => {
             </View>
           </TouchableOpacity>
         </View>
+
         <View style={styles.settingContainer}>
-          <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}>
+          <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}
+          onPress={()=> navigation.navigate ('Settings6')}>
             <Text style={styles.firstText}>Notification</Text>
             <View style={{flexDirection:'row', alignItems:'center'}}>
             <Text style={styles.secondText}>{'>'}</Text>
             </View>
           </TouchableOpacity>
         </View>
+
         <View style={styles.settingContainer}>
           <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}>
             <Text style={styles.firstText}>About</Text>
@@ -71,6 +81,7 @@ const Settings1 = () => {
             </View>
           </TouchableOpacity>
         </View>
+        
         <View style={styles.settingContainer}>
           <TouchableOpacity style={{ flexDirection:'row', justifyContent:'space-between' }}>
             <Text style={styles.firstText}>Help</Text>

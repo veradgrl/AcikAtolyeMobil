@@ -25,8 +25,45 @@ import FinancialReportExpense from './src/screens/FinancialReportExpense';
 import FinancialReportIncome from './src/screens/FinancialReportIncome';
 import FinancialReportBudget from './src/screens/FinancialReportBudget';
 import FinancialReportQuote from './src/screens/FinancialReportQuote';
+import ExpenseNew from './src/screens/ExpenseNew';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import MyCheckBox from './src/components/MyCheckBox';
+import MySwitch from './src/components/MySwitch';
+import MyRoundCheckBox from './src/components/MyRoundCheckBox';
+import SettingsStack from './src/navigators/StackNavigation/SettingsStack';
+
+
+const Stack = createStackNavigator();
 
 const App = ()=> {
-  return <OnBoarding16/>
+  return (
+<RootNavigator/>
+  )
 }
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+// const App = ()=> {
+//   return (
+//   <NavigationContainer>
+//     <Stack.Navigator
+//     initialRouteName='OnBoarding1'
+//     screenOptions={{headerShown:false}} >
+//  <Stack.Screen name="OnBoarding1" component={OnBoarding1} />
+//  <Stack.Screen name="OnBoarding7" component={OnBoarding7} />
+//   </Stack.Navigator>
+//   </NavigationContainer>
+//   )
+// }
+// export default App;

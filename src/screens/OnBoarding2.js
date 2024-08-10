@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import OB2 from '../../assets/svg/OB2';
 
-const OnBoarding2 = () => {
+const OnBoarding2 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.body}>
@@ -26,10 +26,12 @@ const OnBoarding2 = () => {
         </View>
 
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.primaryButton}>
+          <TouchableOpacity style={styles.primaryButton}
+          onPress={()=> navigation.navigate ('OnBoarding4')}>
             <Text style={styles.primaryButtonText}>Sign Up</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.secondaryButton}>
+          <TouchableOpacity style={styles.secondaryButton}
+          onPress={()=> navigation.navigate ('OnBoarding7')}>
             <Text style={styles.secondaryButtonText}>Login</Text>
           </TouchableOpacity>
         </View>
@@ -82,7 +84,7 @@ const styles = StyleSheet.create({
   },
 
   buttonContainer:{
-    marginTop:81
+    marginTop:52
   },
 
   primaryButton: {

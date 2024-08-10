@@ -10,12 +10,13 @@ import {
 import Arrow from '../../assets/svg/Arrow';
 import Download from '../../assets/svg/Download';
 
-const Settings1 = () => {
+const Settings7 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.body}>
         <View style={styles.titleContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity
+          onPress={()=> navigation.goBack()}>
             <Arrow />
           </TouchableOpacity>
           <Text style={styles.titleText}>Export Data</Text>
@@ -67,7 +68,7 @@ const Settings1 = () => {
   );
 };
 
-export default Settings1;
+export default Settings7;
 
 const styles = StyleSheet.create({
   container: {

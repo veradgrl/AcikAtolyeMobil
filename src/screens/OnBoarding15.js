@@ -19,7 +19,7 @@ import Bank6 from '../../assets/svg/Bank6';
 import Bank7 from '../../assets/svg/Bank7';
 import Bank8 from '../../assets/svg/Bank8';
 
-const OnBoarding15 = () => {
+const OnBoarding15 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.body}>
@@ -93,7 +93,8 @@ const OnBoarding15 = () => {
             </View>
 
             <View>
-              <TouchableOpacity style={styles.buttonContainer}>
+              <TouchableOpacity style={styles.buttonContainer}
+              onPress={()=> navigation.navigate ('OnBoarding16')}>
                 <Text style={styles.buttonText}>Continue</Text>
               </TouchableOpacity>
             </View>

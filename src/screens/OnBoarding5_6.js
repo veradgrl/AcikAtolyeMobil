@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import Arrow from '../../assets/svg/Arrow';
 
-const OnBoarding5_6 = () => {
+const OnBoarding5_6 = ({navigation}) => {
   const [timeLeft, setTimeLeft] = useState(5 * 60 * 1000);
 
   useEffect(() => {
@@ -81,7 +81,8 @@ const OnBoarding5_6 = () => {
         </View>
 
         <View>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button}
+          onPress={()=> navigation.navigate ('OnBoarding13')}>
             <Text style={styles.buttonText}>Verify</Text>
           </TouchableOpacity>
         </View>

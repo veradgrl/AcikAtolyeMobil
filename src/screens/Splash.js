@@ -3,11 +3,11 @@ import {SafeAreaView, StyleSheet, Text} from 'react-native';
 
 
 const Splash = ({navigation}) => {
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     navigation.replace('SignUp');
-  //   }, 1000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.replace('OnBoarding1');
+    }, 500);
+  }, []);
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.text}>MONTRA</Text>

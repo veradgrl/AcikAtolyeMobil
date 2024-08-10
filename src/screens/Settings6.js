@@ -8,14 +8,16 @@ import {
   ScrollView,
 } from 'react-native';
 import Arrow from '../../assets/svg/Arrow';
+import MySwitch from '../components/MySwitch';
 
-const Settings5 = () => {
+const Settings6 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.body}>
         <ScrollView>
           <View style={styles.titleContainer}>
-            <TouchableOpacity>
+            <TouchableOpacity
+          onPress={()=> navigation.goBack()}>
               <Arrow />
             </TouchableOpacity>
             <Text style={styles.titleText}>Notifications</Text>
@@ -24,36 +26,28 @@ const Settings5 = () => {
           <View style={styles.settingContainer}>
             <View>
               <Text style={styles.firstText}>Expense Alert</Text>
-              <Text style={styles.secondText}>Get notification about your</Text>
-              <Text  style={styles.secondText}>expenses</Text>
+              <Text style={styles.secondText}>Get notification about your{'\n'}expenses</Text>
             </View>
-            <TouchableOpacity>
-              <Text>{'o'}</Text>
-            </TouchableOpacity>
+              <MySwitch/>
           </View>
 
           <View style={styles.settingContainer}>
             <View>
               <Text style={styles.firstText}>Budget</Text>
-              <Text style={styles.secondText}>Get notification when your</Text>
-              <Text style={styles.secondText}>budget exceeding the limit</Text>
+              <Text style={styles.secondText}>Get notification when your{'\n'}budget exceeding the limit</Text>
             </View>
 
-            <TouchableOpacity>
-              <Text>{'o'}</Text>
-            </TouchableOpacity>
+            <MySwitch/>
           </View>
 
           <View style={styles.settingContainer}>
             <View>
               <Text style={styles.firstText}>Tips & Articles</Text>
-              <Text style={styles.secondText}>Small & useful pieces of pratical</Text>
-              <Text style={styles.secondText}>financial advice</Text>
+              <Text style={styles.secondText}>Small & useful pieces of pratical{'\n'}financial advice</Text>
             </View>
 
-            <TouchableOpacity>
-              <Text>{'o'}</Text>
-            </TouchableOpacity>
+            <MySwitch/>
+          
 
           </View>
         </ScrollView>
@@ -62,7 +56,7 @@ const Settings5 = () => {
   );
 };
 
-export default Settings5;
+export default Settings6;
 
 const styles = StyleSheet.create({
   container: {

@@ -4,7 +4,7 @@ import {Text, View, StyleSheet, TouchableOpacity,
 } from 'react-native';
 import OB3 from '../../assets/svg/OB3'
 
-const OnBoarding3 = () => {
+const OnBoarding3 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
         <View style={styles.body}>
@@ -23,11 +23,13 @@ const OnBoarding3 = () => {
             </View>
 
             <View style={styles.buttonContainer}>
-                <TouchableOpacity style={styles.primaryButton}>
+                <TouchableOpacity style={styles.primaryButton}
+                onPress={()=> navigation.navigate ('OnBoarding4')}>
                     <Text style={styles.primaryButtonText}>Sign Up</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.secondaryButton}>
+                <TouchableOpacity style={styles.secondaryButton}
+                onPress={()=> navigation.navigate ('OnBoarding7')}>
                     <Text style={styles.secondaryButtonText}>Login</Text>
                 </TouchableOpacity>
             </View>
@@ -81,7 +83,7 @@ const styles = StyleSheet.create({
     },
   
     buttonContainer:{
-      marginTop:101
+      marginTop:90
     },
   
     primaryButton: {

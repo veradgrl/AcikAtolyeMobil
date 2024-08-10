@@ -9,12 +9,12 @@ import {
 } from 'react-native';
 import Arrow from '../../assets/svg/Arrow';
 
-const OnBoarding7 = () => {
+const OnBoarding7 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.body}>
       <View style={styles.titleContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> navigation.goBack ()}>
             <Arrow />
           </TouchableOpacity>
           <Text style={styles.titleText}>Login</Text>
@@ -50,13 +50,15 @@ const OnBoarding7 = () => {
         </View>
 
         <View>
-          <TouchableOpacity>
+          <TouchableOpacity
+          onPress={()=> navigation.navigate ('OnBoarding8')}>
             <Text style={styles.forgotPassword}>Forgot Password?</Text>
           </TouchableOpacity>
         </View>
 
         <View>
-          <TouchableOpacity style={styles.lastTextContainer}>
+          <TouchableOpacity style={styles.lastTextContainer}
+          onPress={()=> navigation.navigate ('OnBoarding4')}>
             <Text style={styles.firstText}>
               Don’t have an account yet?{' '}
               <Text style={styles.secondText}>Sign Up</Text>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
-const OnBoarding13 = () => {
+const OnBoarding13 = ({navigation}) => {
   return (
    <SafeAreaView style={styles.container}>
     <View style={styles.body}>
@@ -16,7 +16,9 @@ const OnBoarding13 = () => {
     </View>
 
     <View>
-              <TouchableOpacity style={styles.buttonContainer}>
+              <TouchableOpacity 
+              onPress={() => navigation.navigate ('OnBoarding14')}
+              style={styles.buttonContainer}>
                 <Text style={styles.buttonText}>Let's Gooo!</Text>
               </TouchableOpacity>
             </View>
@@ -67,7 +69,7 @@ const styles = StyleSheet.create ({
         borderRadius: 16,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 410,
+        marginTop: 350,
       },
     
       buttonText: {

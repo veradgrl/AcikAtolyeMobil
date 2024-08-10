@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import ArrowWhite from '../../assets/svg/ArrowWhite';
 
-const OnBoarding14 = () => {
+const OnBoarding14 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.body}>
@@ -43,7 +43,8 @@ const OnBoarding14 = () => {
           </View>
 
           <View>
-            <TouchableOpacity style={styles.buttonContainer}>
+            <TouchableOpacity style={styles.buttonContainer}
+            onPress={()=> navigation.navigate ('OnBoarding15')}>
               <Text style={styles.buttonText}>Continue</Text></TouchableOpacity>
           </View>
 
@@ -100,8 +101,6 @@ const styles = StyleSheet.create({
     opacity: 0.65,
   },
 
-
-
   moneyInflow: {
     color: '#FCFCFC',
     fontSize: 64,
@@ -110,7 +109,8 @@ const styles = StyleSheet.create({
 
   secondBody: {
     backgroundColor: '#FFFFFF',
-    borderRadius: 32,
+    borderTopRightRadius:32,
+    borderTopLeftRadius:32,
     width: '100%',
     height: 350,
     flexDirection: 'column',

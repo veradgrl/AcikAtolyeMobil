@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import Arrow from '../../assets/svg/Arrow';
 
-const OnBoarding8 = () => {
+const OnBoarding8 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.body}>
@@ -38,7 +38,8 @@ const OnBoarding8 = () => {
         </View>
 
         <View>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button}
+          onPress={()=> navigation.navigate ('OnBoarding9')}>
             <Text style={styles.buttonText}>Continue</Text>
           </TouchableOpacity>
         </View>

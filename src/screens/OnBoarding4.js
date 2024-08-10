@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Text,
   SafeAreaView,
@@ -10,17 +10,21 @@ import {
 } from 'react-native';
 import Arrow from '../../assets/svg/Arrow';
 import GoogleIcon from '../../assets/svg/googleIcon';
+import MyCheckBox from '../components/MyCheckBox';
 
-const OnBoarding4 = () => {
+const OnBoarding4 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.body}>
         <View style={styles.titleContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity
+          onPress={()=> navigation.goBack()}>
             <Arrow />
           </TouchableOpacity>
           <Text style={styles.titleText}>Sign Up</Text>
         </View>
+
+
 
         <View style={styles.inputContainer}>
           <TextInput
@@ -55,24 +59,27 @@ const OnBoarding4 = () => {
         </View>
 
         <View style={styles.checkboxContainer}>
-          <Text style={{color: '#7F3DFF', fontSize: 25}}>[ ] </Text>
-          <Text style={styles.checkboxText}>
+          <View  style={{marginRight:14}}>
+        <MyCheckBox />
+        </View>
+        <Text style={styles.checkboxText}>
             By signing up, you agree to the{' '}
             <Text style={{color: '#7F3DFF'}}>
               {' '}
-              Terms of Service and Privacy Policy
+              Terms of{'\n'}Service and Privacy Policy
             </Text>
           </Text>
         </View>
 
         <View>
-          <TouchableOpacity style={styles.primaryButton}>
+          <TouchableOpacity style={styles.primaryButton}
+          onPress={()=> navigation.navigate ('OnBoarding5_6')}>
             <Text style={styles.primaryButtonText}>Sign Up</Text>
           </TouchableOpacity>
         </View>
 
         <View>
-          <Text style={styles.orWith}>Or with</Text>
+          <Text style={styles.orWith}>Or</Text>
         </View>
 
         <View>
@@ -83,7 +90,8 @@ const OnBoarding4 = () => {
         </View>
 
         <View>
-          <TouchableOpacity>
+          <TouchableOpacity
+          onPress={()=> navigation.navigate ('OnBoarding7')}>
             <Text style={styles.firstText}>
               Already have an account?{' '}
               <Text style={styles.secondText}>Login</Text>
